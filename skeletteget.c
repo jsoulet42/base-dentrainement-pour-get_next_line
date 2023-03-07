@@ -16,6 +16,8 @@
 		on free stack puis reinitialise stack a NULL.
 		on free line puis return NULL;
 	et enfin on return line;*/
+
+WTF que je vais retrouver tres rapidement
 char *get_next_line(int fd)
 {
 	
