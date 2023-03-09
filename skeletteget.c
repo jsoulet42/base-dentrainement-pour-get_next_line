@@ -17,7 +17,6 @@
 	   reinitialise stack a NULL. on free line puis return NULL; et enfin on
 	   return line;*/
 
-WTF que je vais retrouver tres rapidement
 char *get_next_line(int fd)
 {
 	
@@ -102,12 +101,12 @@ char *extract_line(t_list *stack)
 	pour ensuite sauvegarder ce qui suis \n dans un pointeur de type t_list
 	qui repointera vers stack une fois le free de stack effectué.
 	
-	1. Nous avons besoin de 2 pointeur de type t_list ainsi que 2 index. Le
-	   premier pointeur doit être malloc de la taile t_list. Il faut gerer
-	   le cas ou stack est NULL ou le cas du malloc NULL. Initialiser le
-	   pointeur suivant malloc precedement a NULL. Le 2 eme pointeur last
-	   doit pointer sur le dernier élément de pointeur de stack.
-	   (lst_getlast).
+	1. Nous avons besoin de 2 pointeur de type t_list (new_temp et last)
+	   ainsi que 2 index. new_temp doit être malloc de la taile
+	   t_list. Il faut gerer le cas ou stack est NULL ou le cas du new_temp
+	   NULL. Initialiser le pointeur suivant, malloc precedement a NULL. Le
+	   2 eme pointeur last doit pointer sur le dernier élément de pointeur
+	   de stack. (lst_getlast).
 	2. Nous avons besoin d'une boucle qui itere jusqu'au bout du contenue
 	   de last et tant que le contenue de last est different de \n , nous
 	   incrementons. en sortis de boucle si le contenue de last est egal
@@ -123,7 +122,7 @@ char *extract_line(t_list *stack)
 	   finir on fait pointer le pointeur de stack sur le pointeur malloc
 	   precedement pour enfin passer a la ligne suivante et tout recommencer.
 
-void	clean_stash(t_list **stash)
+void	clean_stash(t_list **stack)
 {
 
 }
