@@ -1,3 +1,5 @@
+Le but de GNL est d'afficher ligne par ligne un document texte.
+
 /*----------------------------------------------------------------------------*/
 /*
 	Nous allons avoir besoin d'un char * d'un static t_list et d'un int 
@@ -15,8 +17,8 @@
 	   modifier son content donc on le recoit en **. Au retour de clean_stack
 	   on verifie si le premier element de line et == a 0. On free stack puis
 	   reinitialise stack a NULL. on free line puis return NULL; et enfin on
-	   return line;*/
-
+	   return line;
+*/
 char *get_next_line(int fd)
 {
 	
@@ -88,8 +90,8 @@ void	go_to_stack(t_list **stack, char *buffer, int r_read)
 	   line de j avec le contenue de stack ++; en sortit de boucle 2 nous
 	   passons a la chaine suivante de stack.
 	3. En sortit de boucle 1 pensez a ajouter le /0 a la fin du pointeur
-	   de line de j.*/
-
+	   de line de j.
+*/
 char *extract_line(t_list *stack)
 {
 
@@ -121,7 +123,7 @@ char *extract_line(t_list *stack)
 	   free_stack qui prend en parametre un pointeur de stack. Et pour
 	   finir on fait pointer le pointeur de stack sur le pointeur malloc
 	   precedement pour enfin passer a la ligne suivante et tout recommencer.
-
+*/
 void	clean_stash(t_list **stack)
 {
 
@@ -140,7 +142,6 @@ void	clean_stash(t_list **stack)
 	car pensez bien que revenir en arriere sur une list chainee est
 	impossible).
 */
-
 t_list	*lst_getlast(t_list *stack)
 {
 
